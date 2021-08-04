@@ -318,7 +318,7 @@ async def youtube_dl_call_back(bot, update):
                     i = 0
                     caption = ""
                     if is_w_f:
-                        caption = "@SerialCoIn"
+                        caption = "@mrkpbots"
                     for image in images:
                         if os.path.exists(image):
                             if i == 0:
@@ -343,7 +343,11 @@ async def youtube_dl_call_back(bot, update):
                         media=media_album_p
                     )
             try:
-                shutil.rmtree(tmp_directory_for_each_user)   
+                shutil.rmtree(tmp_directory_for_each_user)  
+            except:
+                pass 
+            try:
+                os.remove(download_directory) 
             except:
                 pass
             try:
